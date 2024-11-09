@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Club, Header, Footer } from './container';
+import { Navbar, LoginForm } from './components';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="app">
+    <Router>
+      {/* Navbar should be shown only on pages that are not the Login page */}
+      <Routes>
+        {/* Route for the LoginForm */}
+        <Route path="/login" element={<LoginForm />} /> 
+
+        {/* Wrap other components in a route for the main content */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />  {/* Navbar only appears on the home or other pages */}
+              <Header />
+              <Club />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
+  </div>
+);
 
 export default App;

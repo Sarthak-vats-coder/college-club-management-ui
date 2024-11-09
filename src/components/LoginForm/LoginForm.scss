@@ -1,0 +1,87 @@
+.main-LoginForm {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  height: auto;
+  width: 420px;
+  color: aliceblue;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 0 10px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(30px);
+  a {
+    color: black;
+    font-size: 1.11rem;
+    text-decoration: underline;
+  }
+}
+  
+.userInput {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin-top: 30px;
+
+  input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.249);
+    border-radius: 40px;
+    background: transparent;
+    padding: 20px 45px 20px 20px;
+    color: white;
+    font-size: 15px;
+  }
+
+  input::placeholder {
+    color: white;
+  }
+
+  .icon {
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    font-size: 15px;
+    transform: translateX(100%);
+  }
+}
+
+.app__loginForm-forgotPassword {  // Corrected class name
+  font-size: 15px;
+  margin-top: 10px;
+  justify-content: space-between;
+  text-align: end;
+}
+
+.rememberMe {
+  label {
+    input {
+      margin-right: 5px;
+    }
+  }
+}
+
+.app__loginForm-submitButton {
+  position: relative;
+  width: 80%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 5px black;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  left: 10%; 
+}
+
+.register {
+  margin-top: 10px;
+  margin-left: 15%;
+  text-align: center;
+}
